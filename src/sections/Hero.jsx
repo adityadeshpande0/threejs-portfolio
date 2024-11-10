@@ -2,6 +2,10 @@ import { Canvas } from "@react-three/fiber";
 import Cube from "../components/Cube";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../commons/commonData";
+import { Suspense } from "react";
+import { PerspectiveCamera } from "@react-three/drei";
+import HeroCamera from "../components/HeroCamera";
+import { HackerRoom } from "../components/HackerRoom";
 
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 });
@@ -19,7 +23,16 @@ const Hero = () => {
       </div>
       <div className="w-full h-full absolute inset-0 mt-5">
         <Canvas className="w-full h-full">
-          <Cube position={sizes.cubePosition} />
+          <Suspense>
+            <PerspectiveCamera makeDefault position={[0, 0, 30]} />
+            <HeroCamera isMobile={isMobile}>
+              <HackerRoom
+                scale={sizes.deskScale}
+                position={sizes.deskPosition}
+                rotation={[0.1, -Math.PI, 0]}
+              />
+            </HeroCamera>
+          </Suspense>
         </Canvas>
       </div>
     </section>
