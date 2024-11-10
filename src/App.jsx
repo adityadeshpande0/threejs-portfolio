@@ -1,9 +1,10 @@
 import "./App.css";
+import Navbar from "./sections/Navbar";
 
 function App() {
   return (
     <main className="max-w-7xl mx-auto relative">
-      <>Aditya Deshpande portfolio</>
+      <Navbar/>
     </main>
   );
 }
