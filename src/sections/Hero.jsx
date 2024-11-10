@@ -7,6 +7,7 @@ import { PerspectiveCamera } from "@react-three/drei";
 import HeroCamera from "../components/HeroCamera";
 import { HackerRoom } from "../components/HackerRoom";
 import CanvasLoader from "../components/Loading";
+import Laptop from "../components/Laptop";
 
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 });
