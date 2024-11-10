@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import { PerspectiveCamera } from "@react-three/drei";
 import HeroCamera from "../components/HeroCamera";
 import { HackerRoom } from "../components/HackerRoom";
+import CanvasLoader from "../components/Loading";
 
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 });
@@ -15,7 +16,7 @@ const Hero = () => {
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
   return (
     <section className="min-h-screen w-full flex flex-col relative" id="home">
-      <div className="w-full mx-auto flex flex-col sm:mt-18 mt-20 c-space gap-3">
+      <div className="w-full mx-auto flex flex-col sm:mt-34 mt-20 c-space gap-3">
         <p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans">
           Hi, I am Aditya <span className="waving-hand">👋</span>
         </p>
@@ -23,7 +24,7 @@ const Hero = () => {
       </div>
       <div className="w-full h-full absolute inset-0 mt-5">
         <Canvas className="w-full h-full">
-          <Suspense>
+          <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
             <HeroCamera isMobile={isMobile}>
               <HackerRoom
@@ -32,6 +33,8 @@ const Hero = () => {
                 rotation={[0.1, -Math.PI, 0]}
               />
             </HeroCamera>
+            <ambientLight intensity={3} />
+            <directionalLight position={[10, 0, 0]} intensity={0.5} />
           </Suspense>
         </Canvas>
       </div>
