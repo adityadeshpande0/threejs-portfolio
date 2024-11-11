@@ -8,7 +8,7 @@ import HeroCamera from "../components/HeroCamera";
 import { HackerRoom } from "../components/HackerRoom";
 import CanvasLoader from "../components/Loading";
 import ReactLogo from "../components/ReactLogo";
-import CssLogo from "../components/CssLogo";
+import Button from "../components/Button";
 
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 });
@@ -16,6 +16,7 @@ const Hero = () => {
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
 
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
+
   return (
     <section className="min-h-screen w-full flex flex-col relative" id="home">
       <div className="w-full mx-auto flex flex-col sm:mt-34 mt-20 c-space gap-3">
@@ -42,6 +43,15 @@ const Hero = () => {
             <directionalLight position={[10, 0, 0]} intensity={0.5} />
           </Suspense>
         </Canvas>
+      </div>
+      <div
+        className={`absolute ${
+          isSmall ? 'bottom-40' : isMobile ? 'bottom-32' : 'bottom-14'
+        } left-0 right-0 w-full z-10 flex justify-center`}
+      >
+        <a href="#about" className="w-fit">
+          <Button name="Download Resume" />
+        </a>
       </div>
     </section>
   );

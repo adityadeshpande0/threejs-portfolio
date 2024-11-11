@@ -1,7 +1,7 @@
 import { Float, useGLTF } from '@react-three/drei';
 
 const CssLogo = (props) => {
-  const { nodes, materials } = useGLTF('models/css_logo.gltf');
+  const { nodes, materials } = useGLTF('models/black_hole.glb');
   console.log(nodes, materials);
   return (
     <Float floatIntensity={1}>
@@ -18,6 +18,6 @@ const CssLogo = (props) => {
   );
 };
 
-useGLTF.preload('models/css_logo.gltf');
+useGLTF.preload('models/black_hole.glb');
 
 export default CssLogo;
