@@ -7,7 +7,7 @@ import { PerspectiveCamera } from "@react-three/drei";
 import HeroCamera from "../components/HeroCamera";
 import { HackerRoom } from "../components/HackerRoom";
 import CanvasLoader from "../components/Loading";
-import Laptop from "../components/Laptop";
+import ReactLogo from "../components/ReactLogo";
 
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 });
@@ -34,6 +34,9 @@ const Hero = () => {
                 rotation={[0.1, -Math.PI, 0]}
               />
             </HeroCamera>
+            <group>
+              <ReactLogo position={sizes.reactLogoPosition} />
+            </group>
             <ambientLight intensity={3} />
             <directionalLight position={[10, 0, 0]} intensity={0.5} />
           </Suspense>
