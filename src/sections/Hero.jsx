@@ -46,11 +46,14 @@ const Hero = () => {
       </div>
       <div
         className={`absolute ${
-          isSmall ? 'bottom-40' : isMobile ? 'bottom-32' : 'bottom-14'
-        } left-0 right-0 w-full z-10 flex justify-center`}
+          isSmall ? "bottom-40" : isMobile ? "bottom-32" : "bottom-14"
+        } left-0 right-0 w-full z-10 flex justify-center space-x-4`} // Added space-x-4 for spacing between buttons
       >
         <a href="#about" className="w-fit">
-          <Button name="Download Resume" />
+          <Button name="Download Resume" isBeam={true} />
+        </a>
+        <a href="#resume" className="w-fit">
+          <Button name="My Projects" isBeam={false} />
         </a>
       </div>
     </section>
