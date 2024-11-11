@@ -8,6 +8,7 @@ import HeroCamera from "../components/HeroCamera";
 import { HackerRoom } from "../components/HackerRoom";
 import CanvasLoader from "../components/Loading";
 import ReactLogo from "../components/ReactLogo";
+import CssLogo from "../components/CssLogo";
 
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 });
