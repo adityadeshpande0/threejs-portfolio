@@ -16,7 +16,15 @@ const Hero = () => {
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
 
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
-
+  const handleDownloadResume = () => {
+    const link = document.createElement("a");
+    link.href = `https://drive.google.com/file/d/1ckurnotKNGpnKX1UItAy2swfgbjy7Fyk/view?usp=drive_link`;
+    link.download = "Aditya_Deshpande_Resume.pdf";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.click();
+    link.click();
+  };
   return (
     <section className="min-h-screen w-full flex flex-col relative" id="home">
       <div className="w-full mx-auto flex flex-col sm:mt-34 mt-20 c-space gap-3">
@@ -51,7 +59,7 @@ const Hero = () => {
         } left-0 right-0 w-full z-10 flex justify-center space-x-4`}
       >
         <a href="#about" className="w-fit">
-          <Button name="Download Resume" isBeam={true} />
+          <Button onClick={handleDownloadResume} name="Download Resume" isBeam={true} />
         </a>
         <a href="#resume" className="w-fit">
           <Button name="My Projects" isBeam={false} />
