@@ -38,6 +38,7 @@ const Hero = () => {
             </HeroCamera>
             <group>
               <ReactLogo position={sizes.reactLogoPosition} />
+              <Cube position={sizes.targetPosition} />
             </group>
             <ambientLight intensity={3} />
             <directionalLight position={[10, 0, 0]} intensity={0.5} />
@@ -47,7 +48,7 @@ const Hero = () => {
       <div
         className={`absolute ${
           isSmall ? "bottom-40" : isMobile ? "bottom-32" : "bottom-14"
-        } left-0 right-0 w-full z-10 flex justify-center space-x-4`} // Added space-x-4 for spacing between buttons
+        } left-0 right-0 w-full z-10 flex justify-center space-x-4`}
       >
         <a href="#about" className="w-fit">
           <Button name="Download Resume" isBeam={true} />
