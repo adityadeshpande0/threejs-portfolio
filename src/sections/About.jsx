@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Globe from "react-globe.gl";
+import Button from "../components/Button";
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
@@ -37,7 +38,7 @@ const About = () => {
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
             <img
-              src="assets/grid2.png"
+              src="assets/grid.png"
               alt="grid-2"
               className="w-full sm:h-[276px] h-fit object-contain"
             />
@@ -81,7 +82,7 @@ const About = () => {
               </p>
               <p className="grid-subtext" style={{textAlign:'justify'}}>
               </p>
-              {/* <Button name="Contact Me" isBeam containerClass="w-full mt-10" /> */}
+              <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
             </div>
           </div>
         </div>
