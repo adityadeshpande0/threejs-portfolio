@@ -6,22 +6,22 @@ const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
   const skillsData = [
     { title: "React", image: "", left: "35%", top: "0%" },
-    { title: "React Native", image: "", left: "8", top: "12" },
-    { title: "Azure Cloud", image: "", left: "8", top: "12" },
+    { title: "React Native", image: "", left: "50%", top: "12%" },
+    { title: "Azure Cloud", image: "", left: "0%", top: "69%" },
     { title: "HTML", image: "", left: "0%", top: "0%" },
-    { title: "Redux Toolkit", image: "", left: "10%", top: "40%" },
-    { title: "Hooks", image: "", left: "10%", top: "40%" },
+    { title: "Redux Toolkit", image: "", left: "46%", top: "23%" },
+    { title: "Hooks", image: "", left: "0%", top: "34%" },
     { title: "Redux Thunk", image: "", left: "0%", top: "12%" },
-    { title: "React Query", image: "", left: "5%", top: "65%" },
-    { title: "Typescript", image: "", left: "2%", top: "25%" },
-    { title: "Javascript", image: "", left: "20", top: "85" },
-    { title: "Tailwind CSS", image: "", left: "5%", top: "65%" },
-    { title: "Bootstrap", image: "", left: "5%", top: "65%" },
-    { title: "Framer Motion", image: "", left: "5%", top: "65%" },
-    { title: "CSS", image: "", left: "20", top: "85" },
+    { title: "React Query", image: "", left: "0%", top: "45%" },
+    { title: "Typescript", image: "", left: "0%", top: "23%" },
+    { title: "Javascript", image: "", left: "52%", top: "34%" },
+    { title: "Tailwind CSS", image: "", left: "49%", top: "45%" },
+    { title: "Bootstrap", image: "", left: "0%", top: "57%" },
+    { title: "Framer Motion", image: "", left: "0%", top: "81%" },
+    { title: "CSS", image: "", left: "75%", top: "69%" },
     { title: "SCSS", image: "", left: "70%", top: "0" },
-    { title: "RTL", image: "", left: "20", top: "85" },
-    { title: "Jira", image: "", left: "90", top: "25" },
+    { title: "RTL", image: "", left: "75%", top: "57%" },
+    { title: "Jira", image: "", left: "45%", top: "57%" },
   ];
   const handleCopy = () => {
     navigator.clipboard.writeText("adityadeshpande1@outlook.com");
@@ -40,7 +40,7 @@ const About = () => {
   };
   const containerRef = useRef(null);
   return (
-    <section className="c-space my-20" id="about">
+    <section className="c-space my-0" id="about">
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
@@ -73,7 +73,7 @@ const About = () => {
                   className="inline-flex gap-1 px-4 sm:px-6 py-2 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full items-center absolute"
                   drag
                   dragConstraints={containerRef}
-                  animate={getRandomMotion()}
+                  // animate={getRandomMotion()}
                   transition={{
                     duration: 6,
                     ease: "easeInOut",
