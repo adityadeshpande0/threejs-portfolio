@@ -9,7 +9,7 @@ import { HackerRoom } from "../components/HackerRoom";
 import CanvasLoader from "../components/Loading";
 import ReactLogo from "../components/ReactLogo";
 import Button from "../components/Button";
-
+import { motion } from "framer-motion";
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ maxWidth: 768 });
@@ -28,10 +28,17 @@ const Hero = () => {
   return (
     <section className="min-h-screen w-full flex flex-col relative" id="home">
       <div className="w-full mx-auto flex flex-col sm:mt-34 mt-20 c-space gap-3">
+      <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
         <p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans">
           Hi, I am Aditya <span className="waving-hand">👋</span>
         </p>
-        <p className="hero_tag text-gray_gradient">Full Stack Developer</p>
+    
+          <p className="hero_tag text-gray_gradient">Full Stack Developer</p>
+        </motion.div>
       </div>
       <div className="w-full h-full absolute inset-0 mt-5">
         <Canvas className="w-full h-full mb-0">
@@ -59,7 +66,11 @@ const Hero = () => {
         } left-0 right-0 w-full z-10 flex justify-center space-x-4`}
       >
         <a href="#about" className="w-fit">
-          <Button onClick={handleDownloadResume} name="Download Resume" isBeam={true} />
+          <Button
+            onClick={handleDownloadResume}
+            name="Download Resume"
+            isBeam={true}
+          />
         </a>
         <a href="#projects" className="w-fit">
           <Button name="My Projects" isBeam={false} />
