@@ -10,7 +10,7 @@ const AppWrapper = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 0);
+    }, 3500);
 
     return () => clearTimeout(timer);
   }, []);

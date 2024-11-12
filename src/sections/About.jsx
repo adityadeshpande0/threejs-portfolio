@@ -11,7 +11,7 @@ const About = () => {
     { title: "HTML", image: "", left: "0%", top: "0%" },
     { title: "Redux Toolkit", image: "", left: "10%", top: "40%" },
     { title: "Hooks", image: "", left: "10%", top: "40%" },
-    { title: "Redux Thunk", image: "", left: "35%", top: "15%" },
+    { title: "Redux Thunk", image: "", left: "0%", top: "12%" },
     { title: "React Query", image: "", left: "5%", top: "65%" },
     { title: "Typescript", image: "", left: "2%", top: "25%" },
     { title: "Javascript", image: "", left: "20", top: "85" },
