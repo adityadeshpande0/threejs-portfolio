@@ -34,7 +34,7 @@ const Hero = () => {
         <p className="hero_tag text-gray_gradient">Full Stack Developer</p>
       </div>
       <div className="w-full h-full absolute inset-0 mt-5">
-        <Canvas className="w-full h-full">
+        <Canvas className="w-full h-full mb-0">
           <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
             <HeroCamera isMobile={isMobile}>
