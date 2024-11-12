@@ -15,10 +15,16 @@ const About = () => {
   const handleCopy = () => {
     navigator.clipboard.writeText("adityadeshpande1@outlook.com");
     setHasCopied(true);
-
     setTimeout(() => {
       setHasCopied(false);
     }, 2000);
+  };
+  const getRandomMotion = () => {
+    const getRandomValue = () => Math.floor(Math.random() * 20) - 10;
+    return {
+      x: [0, getRandomValue(), getRandomValue(), getRandomValue(), 0],
+      y: [0, getRandomValue(), getRandomValue(), getRandomValue(), 0],
+    };
   };
   const containerRef = useRef(null);
   return (
@@ -52,9 +58,16 @@ const About = () => {
                 <motion.div
                   key={data.title}
                   style={{ left: data.left, top: data.top }}
-                  className="inline-flex gap-1 px-4 sm:px-6 py-1 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full items-center absolute"
+                  className="inline-flex gap-1 px-4 sm:px-6 py-2 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full items-center absolute"
                   drag
                   dragConstraints={containerRef}
+                  animate={getRandomMotion()}
+                  transition={{
+                    duration: 6,
+                    ease: "easeInOut",
+                    repeat: Infinity,
+                    repeatType: "mirror",
+                  }}
                 >
                   <span className="text-xs sm:text-sm md:text-base font-medium text-gray-900">
                     {data.title}
