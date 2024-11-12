@@ -80,7 +80,6 @@ const About = () => {
                 I’m very flexible with time zone communications & locations
               </p>
               <p className="grid-subtext" style={{textAlign:'justify'}}>
-               
               </p>
               {/* <Button name="Contact Me" isBeam containerClass="w-full mt-10" /> */}
             </div>
