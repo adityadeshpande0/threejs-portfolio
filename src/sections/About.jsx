@@ -1,10 +1,17 @@
 import { useState } from "react";
 import Globe from "react-globe.gl";
 import Button from "../components/Button";
-
+import {motion} from 'framer-motion'
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
-
+  const skillsData = [
+    { title: "React", image: "", left: "50%", top: "50%" },
+    { title: "Redux Toolkit", image: "", left: "10%", top: "40%" },
+    { title: "Redux Thunk", image: "", left: "35%", top: "15%" },
+    { title: "React Query", image: "", left: "5%", top: "65%" },
+    { title: "Typescript", image: "", left: "2%", top: "25%" },
+    { title: "Javascript", image: "", left: "", top: "" },
+  ];
   const handleCopy = () => {
     navigator.clipboard.writeText("adityadeshpande1@outlook.com");
     setHasCopied(true);
@@ -25,7 +32,7 @@ const About = () => {
             />
             <div>
               <p className="grid-headtext">Hi, I’m Aditya Deshpande</p>
-              <p className="grid-subtext" style={{textAlign:'justify'}}>
+              <p className="grid-subtext" style={{ textAlign: "justify" }}>
                 React JS Front-End Developer with around 3 years of hands-on
                 experience in enterprise-level projects. Experienced in
                 collaborating with clients across E-Commerce, Fuel Data
@@ -34,18 +41,25 @@ const About = () => {
             </div>
           </div>
         </div>
-
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
-            <img
-              src="assets/grid.png"
-              alt="grid-2"
-              className="w-full sm:h-[276px] h-fit object-contain"
-            />
-
+            <div className="relative flex-1">
+              {skillsData.map((data) => (
+                <motion.div
+                  key={data.title}
+                  style={{ left: data.left, top: data.top }}
+                  className="inline-flex gap-1 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 items-center absolute"
+                drag
+                >
+                  <span className="font-medium text-gray-900">
+                    {data.title}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
             <div>
               <p className="grid-headtext">Tech Stack</p>
-              <p className="grid-subtext" style={{textAlign:'justify'}}>
+              <p className="grid-subtext" style={{ textAlign: "justify" }}>
                 I specialize in a variety of languages, frameworks, and tools
                 that allow me to build robust and scalable applications
               </p>
@@ -69,7 +83,7 @@ const About = () => {
                   {
                     lat: 40,
                     lng: -100,
-                    text: "Rjieka, Croatia",
+                    text: "Aditya Deshpande",
                     color: "white",
                     size: 15,
                   },
@@ -77,11 +91,10 @@ const About = () => {
               />
             </div>
             <div>
-              <p className="grid-headtext" style={{textAlign:'justify'}}>
+              <p className="grid-headtext" style={{ textAlign: "justify" }}>
                 I’m very flexible with time zone communications & locations
               </p>
-              <p className="grid-subtext" style={{textAlign:'justify'}}>
-              </p>
+              <p className="grid-subtext" style={{ textAlign: "justify" }}></p>
               <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
             </div>
           </div>
@@ -97,7 +110,7 @@ const About = () => {
 
             <div>
               <p className="grid-headtext">My Passion for Coding</p>
-              <p className="grid-subtext" style={{textAlign:'justify'}}>
+              <p className="grid-subtext" style={{ textAlign: "justify" }}>
                 I love solving problems and building things through code.
                 Programming isn&apos;t just my profession—it&apos;s my passion.
                 I enjoy exploring new technologies, and enhancing my skills.
