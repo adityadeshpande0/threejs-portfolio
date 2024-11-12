@@ -20,7 +20,7 @@ const AppWrapper = () => {
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Suspense fallback={<Loader />}>
+    <Suspense fallback={<LoaderComponent />}>
       <AppWrapper />
     </Suspense>
   </StrictMode>

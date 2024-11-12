@@ -61,7 +61,7 @@ const Hero = () => {
         <a href="#about" className="w-fit">
           <Button onClick={handleDownloadResume} name="Download Resume" isBeam={true} />
         </a>
-        <a href="#resume" className="w-fit">
+        <a href="#projects" className="w-fit">
           <Button name="My Projects" isBeam={false} />
         </a>
       </div>
