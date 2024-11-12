@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Globe from "react-globe.gl";
 import Button from "../components/Button";
-import {motion} from 'framer-motion'
+import { motion } from "framer-motion";
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
   const skillsData = [
@@ -20,6 +20,7 @@ const About = () => {
       setHasCopied(false);
     }, 2000);
   };
+  const containerRef = useRef(null);
   return (
     <section className="c-space my-20" id="about">
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
@@ -43,15 +44,19 @@ const About = () => {
         </div>
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
-            <div className="relative flex-1">
+            <div
+              className="relative flex-1 w-full h-full p-20"
+              ref={containerRef}
+            >
               {skillsData.map((data) => (
                 <motion.div
                   key={data.title}
                   style={{ left: data.left, top: data.top }}
-                  className="inline-flex gap-1 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 items-center absolute"
-                drag
+                  className="inline-flex gap-1 px-4 sm:px-6 py-1 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full items-center absolute"
+                  drag
+                  dragConstraints={containerRef}
                 >
-                  <span className="font-medium text-gray-900">
+                  <span className="text-xs sm:text-sm md:text-base font-medium text-gray-900">
                     {data.title}
                   </span>
                 </motion.div>
