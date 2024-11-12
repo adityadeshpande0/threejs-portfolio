@@ -5,12 +5,23 @@ import { motion } from "framer-motion";
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
   const skillsData = [
-    { title: "React", image: "", left: "50%", top: "50%" },
+    { title: "React", image: "", left: "35%", top: "0%" },
+    { title: "React Native", image: "", left: "8", top: "12" },
+    { title: "Azure Cloud", image: "", left: "8", top: "12" },
+    { title: "HTML", image: "", left: "0%", top: "0%" },
     { title: "Redux Toolkit", image: "", left: "10%", top: "40%" },
+    { title: "Hooks", image: "", left: "10%", top: "40%" },
     { title: "Redux Thunk", image: "", left: "35%", top: "15%" },
     { title: "React Query", image: "", left: "5%", top: "65%" },
     { title: "Typescript", image: "", left: "2%", top: "25%" },
-    { title: "Javascript", image: "", left: "", top: "" },
+    { title: "Javascript", image: "", left: "20", top: "85" },
+    { title: "Tailwind CSS", image: "", left: "5%", top: "65%" },
+    { title: "Bootstrap", image: "", left: "5%", top: "65%" },
+    { title: "Framer Motion", image: "", left: "5%", top: "65%" },
+    { title: "CSS", image: "", left: "20", top: "85" },
+    { title: "SCSS", image: "", left: "70%", top: "0" },
+    { title: "RTL", image: "", left: "20", top: "85" },
+    { title: "Jira", image: "", left: "90", top: "25" },
   ];
   const handleCopy = () => {
     navigator.clipboard.writeText("adityadeshpande1@outlook.com");
@@ -20,10 +31,11 @@ const About = () => {
     }, 2000);
   };
   const getRandomMotion = () => {
-    const getRandomValue = () => Math.floor(Math.random() * 20) - 10;
+    const getRandomValue = () => Math.floor(Math.random() * 10) - 10;
     return {
       x: [0, getRandomValue(), getRandomValue(), getRandomValue(), 0],
       y: [0, getRandomValue(), getRandomValue(), getRandomValue(), 0],
+      z: [0, getRandomValue(), getRandomValue(), getRandomValue(), 0],
     };
   };
   const containerRef = useRef(null);
