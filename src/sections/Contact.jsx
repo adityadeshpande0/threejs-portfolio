@@ -71,8 +71,7 @@ const Contact = () => {
         <div className="relative rounded-lg shadow-lg max-w-lg mx-4 text-white flex flex-col space-y-4 mt-20">
           <h3 className="text-2xl font-bold">Let's talk</h3>
           <p className="text-lg mt-2  text-justify">
-            Whether you’re looking to build a new website, improve your existing
-            platform, or bring a unique project to life, I’m here to help.
+           You can also reach out to me by filling this form !
           </p>
 
           <form
