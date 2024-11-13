@@ -11,51 +11,51 @@ const Contact = () => {
     setForm({ ...form, [name]: value });
   };
 
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     setLoading(true);
+  //   const handleSubmit = (e) => {
+  //     e.preventDefault();
+  //     setLoading(true);
 
-//     emailjs
-//       .send(
-//         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-//         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-//         {
-//           from_name: form.name,
-//           to_name: "JavaScript Mastery",
-//           from_email: form.email,
-//           to_email: "sujata@jsmastery.pro",
-//           message: form.message,
-//         },
-//         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-//       )
-//       .then(
-//         () => {
-//           setLoading(false);
-//           showAlert({
-//             show: true,
-//             text: "Thank you for your message 😃",
-//             type: "success",
-//           });
-//           setTimeout(() => {
-//             hideAlert();
-//             setForm({
-//               name: "",
-//               email: "",
-//               message: "",
-//             });
-//           }, 3000);
-//         },
-//         (error) => {
-//           setLoading(false);
-//           console.error(error);
-//           showAlert({
-//             show: true,
-//             text: "I didn't receive your message 😢",
-//             type: "danger",
-//           });
-//         }
-//       );
-//   };
+  //     emailjs
+  //       .send(
+  //         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+  //         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+  //         {
+  //           from_name: form.name,
+  //           to_name: "JavaScript Mastery",
+  //           from_email: form.email,
+  //           to_email: "sujata@jsmastery.pro",
+  //           message: form.message,
+  //         },
+  //         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+  //       )
+  //       .then(
+  //         () => {
+  //           setLoading(false);
+  //           showAlert({
+  //             show: true,
+  //             text: "Thank you for your message 😃",
+  //             type: "success",
+  //           });
+  //           setTimeout(() => {
+  //             hideAlert();
+  //             setForm({
+  //               name: "",
+  //               email: "",
+  //               message: "",
+  //             });
+  //           }, 3000);
+  //         },
+  //         (error) => {
+  //           setLoading(false);
+  //           console.error(error);
+  //           showAlert({
+  //             show: true,
+  //             text: "I didn't receive your message 😢",
+  //             type: "danger",
+  //           });
+  //         }
+  //       );
+  //   };
 
   return (
     <section className="c-space my-5" id="contact">
@@ -71,7 +71,7 @@ const Contact = () => {
         <div className="relative rounded-lg shadow-lg max-w-lg mx-4 text-white flex flex-col space-y-4 mt-20">
           <h3 className="text-2xl font-bold">Let's talk</h3>
           <p className="text-lg mt-2  text-justify">
-           You can also reach out to me by filling this form !
+            You can also reach out to me by filling this form !
           </p>
 
           <form
