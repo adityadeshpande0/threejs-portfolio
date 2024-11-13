@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import Globe from "react-globe.gl";
 import Button from "../components/Button";
+import './aboutStyles.scss'
 import { motion } from "framer-motion";
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
@@ -164,7 +165,7 @@ const About = () => {
                   src={hasCopied ? "assets/tick.svg" : "assets/copy.svg"}
                   alt="copy"
                 />
-                <p className="lg:text-xl md:text-xl font-medium text-gray_gradient text-white">
+                <p className="email-id-text lg:text-sm md:text-sm font-small text-gray_gradient text-white">
                   adityadeshpande1@outlook.com
                 </p>
               </div>
