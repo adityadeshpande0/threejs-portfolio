@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import Globe from "react-globe.gl";
 import Button from "../components/Button";
-import './aboutStyles.scss'
+import "./sectionStyles.scss";
 import { motion } from "framer-motion";
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);

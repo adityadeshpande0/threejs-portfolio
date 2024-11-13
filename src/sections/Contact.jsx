@@ -58,25 +58,21 @@ const Contact = () => {
   //   };
 
   return (
-    <section className="c-space my-5" id="contact">
+    <section className="contact-section c-space lg:my-20 md:my-10 sm:my-0" id="contact">
       {alert.show && <Alert {...alert} />}
-
       <div className="relative min-h-screen flex items-center justify-center align-items-center">
         <img
           src="/assets/terminal.png"
           alt="terminal-bg"
-          className="absolute inset-0 min-h-screen object-cover"
+          className="absolute min-h-screen object-cover"
         />
-
         <div className="relative rounded-lg shadow-lg max-w-lg mx-4 text-white flex flex-col space-y-4 mt-20">
-          <h3 className="text-2xl font-bold">Let's talk</h3>
-          <p className="text-lg mt-2  text-justify">
+          <h3 className="text-2xl font-bold text-left">Let's talk</h3>
+          <p className="text-lg mt-2 text-justify">
             You can also reach out to me by filling this form !
           </p>
-
           <form
             ref={formRef}
-            // onSubmit={handleSubmit}
             className="flex flex-col space-y-5"
           >
             <label className="flex flex-col space-y-2">
@@ -91,7 +87,6 @@ const Contact = () => {
                 placeholder="ex., John Doe"
               />
             </label>
-
             <label className="flex flex-col space-y-2">
               <span className="text-sm font-medium text-left">
                 Email address
@@ -106,7 +101,6 @@ const Contact = () => {
                 placeholder="ex., johndoe@gmail.com"
               />
             </label>
-
             <label className="flex flex-col space-y-2">
               <span className="text-sm font-medium text-left">
                 Your message
@@ -121,7 +115,6 @@ const Contact = () => {
                 placeholder="Share your thoughts or inquiries..."
               />
             </label>
-
             <button
               type="submit"
               disabled={loading}
