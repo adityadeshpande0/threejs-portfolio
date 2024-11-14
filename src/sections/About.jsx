@@ -19,14 +19,7 @@ const About = () => {
       setHasCopied(false);
     }, 2000);
   };
-  const getRandomMotion = () => {
-    const getRandomValue = () => Math.floor(Math.random() * 10) - 10;
-    return {
-      x: [0, getRandomValue(), getRandomValue(), getRandomValue(), 0],
-      y: [0, getRandomValue(), getRandomValue(), getRandomValue(), 0],
-      z: [0, getRandomValue(), getRandomValue(), getRandomValue(), 0],
-    };
-  };
+
   const containerRef = useRef(null);
   return (
     <section className="c-space my-0" id="about">
