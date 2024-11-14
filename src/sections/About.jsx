@@ -3,7 +3,12 @@ import Globe from "react-globe.gl";
 import Button from "../components/Button";
 import "./sectionStyles.scss";
 import { motion } from "framer-motion";
-import { skillsDataCloud, skillsDataDevelopment, skillsDataMisc, skillsDataTechnology } from "../commons/commonData";
+import {
+  skillsDataCloud,
+  skillsDataDevelopment,
+  skillsDataMisc,
+  skillsDataTechnology,
+} from "../commons/commonData";
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
 
@@ -46,10 +51,7 @@ const About = () => {
         </div>
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
-            <div
-              className="relative w-full overflow-hidden"
-              ref={containerRef}
-            >
+            <div className="relative w-full overflow-hidden" ref={containerRef}>
               <motion.div
                 className="flex gap-4 animate-scroll"
                 initial={{ x: "100%" }}
@@ -176,7 +178,7 @@ const About = () => {
               </motion.div>
             </div>
 
-            <div>
+            <div className="mt-4">
               <p className="grid-headtext">Tech Stack</p>
               <p className="grid-subtext" style={{ textAlign: "justify" }}>
                 I specialize in a variety of languages, frameworks, and tools
