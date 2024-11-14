@@ -3,27 +3,10 @@ import Globe from "react-globe.gl";
 import Button from "../components/Button";
 import "./sectionStyles.scss";
 import { motion } from "framer-motion";
+import { skillsData } from "../commons/commonData";
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
-  const skillsData = [
-    { title: "React", image: "xyz", left: "35%", top: "0%" },
-    { title: "React Native", image: "xyz", left: "50%", top: "12%" },
-    { title: "Azure Cloud", image: "xyz", left: "0%", top: "69%" },
-    { title: "HTML", image: "xyz", left: "0%", top: "0%" },
-    { title: "Redux Toolkit", image: "", left: "46%", top: "23%" },
-    { title: "Hooks", image: "xyz", left: "0%", top: "34%" },
-    { title: "Redux Thunk", image: "xyz", left: "0%", top: "12%" },
-    { title: "React Query", image: "xyz", left: "0%", top: "45%" },
-    { title: "Typescript", image: "xyz", left: "0%", top: "23%" },
-    { title: "Javascript", image: "xyz", left: "52%", top: "34%" },
-    { title: "Tailwind CSS", image: "xyz", left: "49%", top: "45%" },
-    { title: "Bootstrap", image: "xyz", left: "0%", top: "57%" },
-    { title: "Framer Motion", image: "xyz", left: "0%", top: "81%" },
-    { title: "CSS", image: "xyz", left: "75%", top: "69%" },
-    { title: "SCSS", image: "xyz", left: "70%", top: "0" },
-    { title: "RTL", image: "xyz", left: "75%", top: "57%" },
-    { title: "Jira", image: "xyz", left: "45%", top: "57%" },
-  ];
+  
   const handleCopy = () => {
     navigator.clipboard.writeText("adityadeshpande1@outlook.com");
     setHasCopied(true);
@@ -74,7 +57,6 @@ const About = () => {
                   className="inline-flex gap-1 px-4 sm:px-6 py-2 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full items-center absolute"
                   drag
                   dragConstraints={containerRef}
-                  // animate={getRandomMotion()}
                   transition={{
                     duration: 6,
                     ease: "easeInOut",
