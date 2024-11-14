@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { skillsData } from "../commons/commonData";
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
-  
+
   const handleCopy = () => {
     navigator.clipboard.writeText("adityadeshpande1@outlook.com");
     setHasCopied(true);
@@ -47,29 +47,135 @@ const About = () => {
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
             <div
-              className="relative flex-1 w-full h-full p-20"
+              className="relative  w-full overflow-hidden"
               ref={containerRef}
             >
-              {skillsData.map((data) => (
-                <motion.div
-                  key={data.title}
-                  style={{ left: data.left, top: data.top }}
-                  className="inline-flex gap-1 px-4 sm:px-6 py-2 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full items-center absolute"
-                  drag
-                  dragConstraints={containerRef}
-                  transition={{
-                    duration: 6,
-                    ease: "easeInOut",
-                    repeat: Infinity,
-                    repeatType: "mirror",
-                  }}
-                >
-                  <span className="text-xs sm:text-sm md:text-base font-medium text-gray-900">
-                    {data.title}
-                  </span>
-                </motion.div>
-              ))}
+              <motion.div
+                className="flex gap-4 animate-scroll"
+                initial={{ x: "100%" }}
+                animate={{ x: "-100%" }}
+                transition={{
+                  duration: 100,
+                  ease: "linear",
+                  repeat: Infinity,
+                }}
+              >
+                {skillsData.map((data) => (
+                  <motion.div
+                    key={`row1-${data.title}`}
+                    className="inline-flex px-8 py-2 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-lg items-center"
+                  >
+                    <span className="text-xs sm:text-sm md:text-base font-medium text-gray-900">
+                      {data.title}
+                    </span>
+                  </motion.div>
+                ))}
+                {skillsData.map((data) => (
+                  <motion.div
+                    key={`row1-${data.title}-duplicate`}
+                    className="inline-flex px-8 py-2 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-lg items-center"
+                  >
+                    <span className="text-xs sm:text-sm md:text-base font-medium text-gray-900">
+                      {data.title}
+                    </span>
+                  </motion.div>
+                ))}
+              </motion.div>
+              <motion.div
+                className="flex gap-4 mt-8 animate-scroll"
+                initial={{ x: "-100%" }}
+                animate={{ x: "100%" }}
+                transition={{
+                  duration: 25,
+                  ease: "linear",
+                  repeat: Infinity,
+                }}
+              >
+                {skillsData.map((data) => (
+                  <motion.div
+                    key={`row2-${data.title}`}
+                    className="inline-flex px-8 py-2 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-lg items-center"
+                  >
+                    <span className="text-xs sm:text-sm md:text-base font-medium text-gray-900">
+                      {data.title}
+                    </span>
+                  </motion.div>
+                ))}
+                {skillsData.map((data) => (
+                  <motion.div
+                    key={`row2-${data.title}-duplicate`}
+                    className="inline-flex px-8 py-2 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-lg items-center"
+                  >
+                    <span className="text-xs sm:text-sm md:text-base font-medium text-gray-900">
+                      {data.title}
+                    </span>
+                  </motion.div>
+                ))}
+              </motion.div>
+              <motion.div
+                className="flex gap-4 mt-8 animate-scroll"
+                initial={{ x: "-100%" }}
+                animate={{ x: "100%" }}
+                transition={{
+                  duration: 25,
+                  ease: "linear",
+                  repeat: Infinity,
+                }}
+              >
+                {skillsData.map((data) => (
+                  <motion.div
+                    key={`row2-${data.title}`}
+                    className="inline-flex px-8 py-2 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-lg items-center"
+                  >
+                    <span className="text-xs sm:text-sm md:text-base font-medium text-gray-900">
+                      {data.title}
+                    </span>
+                  </motion.div>
+                ))}
+                {skillsData.map((data) => (
+                  <motion.div
+                    key={`row2-${data.title}-duplicate`}
+                    className="inline-flex px-8 py-2 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-lg items-center"
+                  >
+                    <span className="text-xs sm:text-sm md:text-base font-medium text-gray-900">
+                      {data.title}
+                    </span>
+                  </motion.div>
+                ))}
+              </motion.div>
+              <motion.div
+                className="flex gap-4 mt-8 animate-scroll"
+                initial={{ x: "100%" }}
+                animate={{ x: "-100%" }}
+                transition={{
+                  duration: 22,
+                  ease: "linear",
+                  repeat: Infinity,
+                }}
+              >
+                {skillsData.map((data) => (
+                  <motion.div
+                    key={`row3-${data.title}`}
+                    className="inline-flex px-8 py-2 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-lg items-center"
+                  >
+                    <span className="text-xs sm:text-sm md:text-base font-medium text-gray-900">
+                      {data.title}
+                    </span>
+                  </motion.div>
+                ))}
+                {skillsData.map((data) => (
+                  <motion.div
+                    key={`row3-${data.title}-duplicate`}
+                    className="inline-flex px-8 py-2 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-lg items-center"
+                  >
+                    <span className="text-xs sm:text-sm md:text-base font-medium text-gray-900">
+                      {data.title}
+                    </span>
+                  </motion.div>
+                ))}
+              </motion.div>
             </div>
+
             <div>
               <p className="grid-headtext">Tech Stack</p>
               <p className="grid-subtext" style={{ textAlign: "justify" }}>
