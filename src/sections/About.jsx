@@ -24,7 +24,12 @@ const About = () => {
   return (
     <section className="c-space my-0" id="about">
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
-        <div className="col-span-1 xl:row-span-3">
+        <motion.div
+          className="col-span-1 xl:row-span-3"
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          transition={{ duration: 1.5 }}
+        >
           <div className="grid-container">
             <img
               src="assets/grid1.png"
@@ -41,8 +46,13 @@ const About = () => {
               </p>
             </div>
           </div>
-        </div>
-        <div className="col-span-1 xl:row-span-3">
+        </motion.div>
+        <motion.div
+          className="col-span-1 xl:row-span-3"
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          transition={{ duration: 1.5 }}
+        >
           <div className="grid-container">
             <div className="relative w-full overflow-hidden" ref={containerRef}>
               <motion.div
@@ -179,9 +189,14 @@ const About = () => {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="col-span-1 xl:row-span-4">
+        <motion.div
+          className="col-span-1 xl:row-span-4"
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          transition={{ duration: 1.5 }}
+        >
           <div className="grid-container">
             <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
               <Globe
@@ -212,9 +227,14 @@ const About = () => {
               <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="xl:col-span-2 xl:row-span-3">
+        <motion.div
+          className="xl:col-span-2 xl:row-span-3"
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          transition={{ duration: 1.5 }}
+        >
           <div className="grid-container">
             <img
               src="assets/grid3.png"
@@ -231,9 +251,14 @@ const About = () => {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="xl:col-span-1 xl:row-span-2">
+        <motion.div
+          className="xl:col-span-1 xl:row-span-2"
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          transition={{ duration: 1.5 }}
+        >
           <div className="grid-container">
             <img
               src="assets/grid4.png"
@@ -254,7 +279,7 @@ const About = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
