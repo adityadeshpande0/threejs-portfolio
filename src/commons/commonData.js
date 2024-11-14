@@ -47,29 +47,67 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
   return {
     deskScale: isSmall ? 0.05 : isMobile ? 0.06 : 0.065,
     deskPosition: isMobile ? [0.5, -1.5, 0] : [0.25, -5.5, 0],
-    cubePosition: isSmall ? [1, -2, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [9, -5.5, 0],
-    reactLogoPosition: isSmall ? [6 , 6, 0] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [12, 3, 0],
-    ringPosition: isSmall ? [-5, 7, 0] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 10, 0] : [-24, 10, 0],
-    targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-9, -10, -10] : isTablet ? [-11, -7, -10] : [-13, -13, -10],
+    cubePosition: isSmall
+      ? [1, -2, 0]
+      : isMobile
+        ? [5, -5, 0]
+        : isTablet
+          ? [5, -5, 0]
+          : [9, -5.5, 0],
+    reactLogoPosition: isSmall
+      ? [6, 6, 0]
+      : isMobile
+        ? [5, 4, 0]
+        : isTablet
+          ? [5, 4, 0]
+          : [12, 3, 0],
+    ringPosition: isSmall
+      ? [-5, 7, 0]
+      : isMobile
+        ? [-10, 10, 0]
+        : isTablet
+          ? [-12, 10, 0]
+          : [-24, 10, 0],
+    targetPosition: isSmall
+      ? [-5, -10, -10]
+      : isMobile
+        ? [-9, -10, -10]
+        : isTablet
+          ? [-11, -7, -10]
+          : [-13, -13, -10],
   };
 };
 
-export const skillsData = [
+export const skillsDataTechnology = [
   { title: "React", image: "xyz", left: "35%", top: "0%" },
   { title: "React Native", image: "xyz", left: "50%", top: "12%" },
-  { title: "Azure Cloud", image: "xyz", left: "0%", top: "69%" },
-  { title: "HTML", image: "xyz", left: "0%", top: "0%" },
   { title: "Redux Toolkit", image: "", left: "46%", top: "23%" },
   { title: "Hooks", image: "xyz", left: "0%", top: "34%" },
   { title: "Redux Thunk", image: "xyz", left: "0%", top: "12%" },
   { title: "React Query", image: "xyz", left: "0%", top: "45%" },
+  { title: "Node Js", image: "xyz", left: "45%", top: "57%" },
+];
+export const skillsDataDevelopment = [
+  { title: "HTML", image: "xyz", left: "0%", top: "0%" },
   { title: "Typescript", image: "xyz", left: "0%", top: "23%" },
   { title: "Javascript", image: "xyz", left: "52%", top: "34%" },
   { title: "Tailwind CSS", image: "xyz", left: "49%", top: "45%" },
   { title: "Bootstrap", image: "xyz", left: "0%", top: "57%" },
-  { title: "Framer Motion", image: "xyz", left: "0%", top: "81%" },
   { title: "CSS", image: "xyz", left: "75%", top: "69%" },
   { title: "SCSS", image: "xyz", left: "70%", top: "0" },
+];
+export const skillsDataMisc = [
+  { title: "Framer Motion", image: "xyz", left: "0%", top: "81%" },
+  { title: "Material UI", image: "xyz", left: "0%", top: "81%" },
+  { title: "Native Base", image: "xyz", left: "0%", top: "81%" },
+  { title: "Expo CLI", image: "xyz", left: "0%", top: "81%" },
+  { title: "React Bootstrap", image: "xyz", left: "0%", top: "81%" },
+];
+export const skillsDataCloud = [
+  { title: "Azure Cloud", image: "xyz", left: "0%", top: "69%" },
+  { title: "Version Control", image: "xyz", left: "45%", top: "57%" },
   { title: "RTL", image: "xyz", left: "75%", top: "57%" },
   { title: "Jira", image: "xyz", left: "45%", top: "57%" },
+  { title: "Testing", image: "xyz", left: "45%", top: "57%" },
+  { title: "Git", image: "xyz", left: "45%", top: "57%" },
 ];

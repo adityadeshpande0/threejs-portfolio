@@ -3,7 +3,7 @@ import Globe from "react-globe.gl";
 import Button from "../components/Button";
 import "./sectionStyles.scss";
 import { motion } from "framer-motion";
-import { skillsData } from "../commons/commonData";
+import { skillsDataCloud, skillsDataDevelopment, skillsDataMisc, skillsDataTechnology } from "../commons/commonData";
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
 
@@ -47,7 +47,7 @@ const About = () => {
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
             <div
-              className="relative  w-full overflow-hidden"
+              className="relative w-full overflow-hidden"
               ref={containerRef}
             >
               <motion.div
@@ -55,12 +55,12 @@ const About = () => {
                 initial={{ x: "100%" }}
                 animate={{ x: "-100%" }}
                 transition={{
-                  duration: 100,
+                  duration: 25,
                   ease: "linear",
                   repeat: Infinity,
                 }}
               >
-                {skillsData.map((data) => (
+                {skillsDataTechnology.map((data) => (
                   <motion.div
                     key={`row1-${data.title}`}
                     className="inline-flex px-8 py-2 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-lg items-center"
@@ -70,7 +70,7 @@ const About = () => {
                     </span>
                   </motion.div>
                 ))}
-                {skillsData.map((data) => (
+                {skillsDataTechnology.map((data) => (
                   <motion.div
                     key={`row1-${data.title}-duplicate`}
                     className="inline-flex px-8 py-2 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-lg items-center"
@@ -91,7 +91,7 @@ const About = () => {
                   repeat: Infinity,
                 }}
               >
-                {skillsData.map((data) => (
+                {skillsDataDevelopment.map((data) => (
                   <motion.div
                     key={`row2-${data.title}`}
                     className="inline-flex px-8 py-2 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-lg items-center"
@@ -101,7 +101,7 @@ const About = () => {
                     </span>
                   </motion.div>
                 ))}
-                {skillsData.map((data) => (
+                {skillsDataDevelopment.map((data) => (
                   <motion.div
                     key={`row2-${data.title}-duplicate`}
                     className="inline-flex px-8 py-2 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-lg items-center"
@@ -122,7 +122,7 @@ const About = () => {
                   repeat: Infinity,
                 }}
               >
-                {skillsData.map((data) => (
+                {skillsDataMisc.map((data) => (
                   <motion.div
                     key={`row2-${data.title}`}
                     className="inline-flex px-8 py-2 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-lg items-center"
@@ -132,7 +132,7 @@ const About = () => {
                     </span>
                   </motion.div>
                 ))}
-                {skillsData.map((data) => (
+                {skillsDataMisc.map((data) => (
                   <motion.div
                     key={`row2-${data.title}-duplicate`}
                     className="inline-flex px-8 py-2 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-lg items-center"
@@ -153,7 +153,7 @@ const About = () => {
                   repeat: Infinity,
                 }}
               >
-                {skillsData.map((data) => (
+                {skillsDataCloud.map((data) => (
                   <motion.div
                     key={`row3-${data.title}`}
                     className="inline-flex px-8 py-2 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-lg items-center"
@@ -163,7 +163,7 @@ const About = () => {
                     </span>
                   </motion.div>
                 ))}
-                {skillsData.map((data) => (
+                {skillsDataCloud.map((data) => (
                   <motion.div
                     key={`row3-${data.title}-duplicate`}
                     className="inline-flex px-8 py-2 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-lg items-center"
