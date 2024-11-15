@@ -11,55 +11,42 @@ const Contact = () => {
     setForm({ ...form, [name]: value });
   };
 
-  //   const handleSubmit = (e) => {
-  //     e.preventDefault();
-  //     setLoading(true);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
 
-  //     emailjs
-  //       .send(
-  //         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-  //         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-  //         {
-  //           from_name: form.name,
-  //           to_name: "JavaScript Mastery",
-  //           from_email: form.email,
-  //           to_email: "sujata@jsmastery.pro",
-  //           message: form.message,
-  //         },
-  //         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-  //       )
-  //       .then(
-  //         () => {
-  //           setLoading(false);
-  //           showAlert({
-  //             show: true,
-  //             text: "Thank you for your message 😃",
-  //             type: "success",
-  //           });
-  //           setTimeout(() => {
-  //             hideAlert();
-  //             setForm({
-  //               name: "",
-  //               email: "",
-  //               message: "",
-  //             });
-  //           }, 3000);
-  //         },
-  //         (error) => {
-  //           setLoading(false);
-  //           console.error(error);
-  //           showAlert({
-  //             show: true,
-  //             text: "I didn't receive your message 😢",
-  //             type: "danger",
-  //           });
-  //         }
-  //       );
-  //   };
+    try {
+      const response = await fetch(
+        "https://portfolio-server-brown-omega.vercel.app/portfolio/auth/save-contact-details",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(form),
+        }
+      );
+
+      if (response.ok) {
+        alert("Message sent successfully!");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        console.error("Failed to save contact details");
+        alert("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
-    <section className="contact-section c-space lg:my-20 md:my-10 sm:my-0" id="contact">
-      {alert.show && <Alert {...alert} />}
+    <section
+      className="contact-section c-space lg:my-20 md:my-10 sm:my-0"
+      id="contact"
+    >
       <div className="relative min-h-screen flex items-center justify-center align-items-center">
         <img
           src="/assets/terminal.png"
@@ -69,12 +56,9 @@ const Contact = () => {
         <div className="relative rounded-lg shadow-lg max-w-lg mx-4 text-white flex flex-col space-y-4 mt-20">
           <h3 className="text-2xl font-bold text-left">Let's talk</h3>
           <p className="text-lg mt-2 text-justify">
-            You can also reach out to me by filling this form !
+            You can also reach out to me by filling this form!
           </p>
-          <form
-            ref={formRef}
-            className="flex flex-col space-y-5"
-          >
+          <form onSubmit={handleSubmit} ref={formRef} className="flex flex-col space-y-5">
             <label className="flex flex-col space-y-2">
               <span className="text-sm font-medium text-left">Full Name</span>
               <input
@@ -88,9 +72,7 @@ const Contact = () => {
               />
             </label>
             <label className="flex flex-col space-y-2">
-              <span className="text-sm font-medium text-left">
-                Email address
-              </span>
+              <span className="text-sm font-medium text-left">Email address</span>
               <input
                 type="email"
                 name="email"
@@ -102,9 +84,7 @@ const Contact = () => {
               />
             </label>
             <label className="flex flex-col space-y-2">
-              <span className="text-sm font-medium text-left">
-                Your message
-              </span>
+              <span className="text-sm font-medium text-left">Your message</span>
               <textarea
                 name="message"
                 value={form.message}
