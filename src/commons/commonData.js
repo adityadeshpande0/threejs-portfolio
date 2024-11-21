@@ -111,3 +111,84 @@ export const skillsDataCloud = [
   { title: "Testing", image: "xyz", left: "45%", top: "57%" },
   { title: "Git", image: "xyz", left: "45%", top: "57%" },
 ];
+export const myProjects = [
+  {
+    title: "VS - Code Style Portfolio",
+    desc: "A sleek, VS Code-inspired portfolio showcasing my skills, projects, and experience in a developer-friendly layout. Designed for a seamless, interactive user experience, mirroring the feel of a code editor.",
+    subdesc:
+      "A dynamic VS Code-style portfolio built with React, Vite, SCSS, and JavaScript, showcasing a seamless developer-like interface.",
+    href: "https://adityadeshpande.netlify.app/",
+    texture: "/textures/project/project1.mp4",
+    logo: "/assets/vscode.png",
+    logoStyle: {
+      backgroundColor: "#2A1816",
+      border: "0.2px solid #36201D",
+      boxShadow: "0px 0px 60px 0px #AA3C304D",
+    },
+    spotlight: "/assets/spotlight1.png",
+    tags: [
+      {
+        id: 1,
+        name: "React.js",
+        path: "/assets/react.svg",
+      },
+      {
+        id: 2,
+        name: "Javascript",
+        path: "assets/js_icon.png",
+      },
+      {
+        id: 3,
+        name: "CSS",
+        path: "/assets/css-3.png",
+      },
+      {
+        id: 4,
+        name: "Bootstrap",
+        path: "/assets/bootstrap-logo.png",
+      },
+      {
+        id: 5,
+        name: "Vite",
+        path: "/assets/vite-logo.svg",
+      },
+    ],
+  },
+  {
+    title: "Interview Scheduler",
+    desc: "A comprehensive interview scheduling and management system built with React, TypeScript, Node.js, and MongoDB. This application streamlines the process of organizing, tracking, and conducting interviews, offering users a seamless experience for both candidates and interviewers.",
+    subdesc:
+      "Effortlessly schedule and manage interviews with an intuitive platform designed for efficiency and reliability.",
+    href: "https://intprep.netlify.app/",
+    texture: "/textures/project/project2.mp4",
+    logo: "/assets/react.svg",
+    logoStyle: {
+      backgroundColor: "#13202F",
+      border: "0.2px solid #17293E",
+      boxShadow: "0px 0px 60px 0px #2F6DB54D",
+    },
+    spotlight: "/assets/spotlight2.png",
+    tags: [
+      {
+        id: 1,
+        name: "React.js",
+        path: "/assets/react.svg",
+      },
+      {
+        id: 2,
+        name: "TypeScript",
+        path: "/assets/typescript.png",
+      },
+      {
+        id: 3,
+        name: "MongoDb",
+        path: "/assets/mongodb-icon-2.png",
+      },
+      {
+        id: 4,
+        name: "Node",
+        path: "/assets/node-js_icon.png",
+      },
+    ],
+  },
+];
