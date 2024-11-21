@@ -1,4 +1,3 @@
-import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 
 const Contact = () => {
@@ -54,7 +53,7 @@ const Contact = () => {
           className="absolute min-h-screen object-cover"
         />
         <div className="relative rounded-lg shadow-lg max-w-lg mx-4 text-white flex flex-col space-y-4 mt-20">
-          <h3 className="text-2xl font-bold text-left">Let's talk</h3>
+          <h3 className="text-2xl font-bold text-left">Let&apos;s talk</h3>
           <p className="text-lg mt-2 text-justify">
             You can also reach out to me by filling this form!
           </p>
